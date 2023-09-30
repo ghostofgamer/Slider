@@ -1,20 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
-    private float _health;
+    private readonly float _minHealth = 0f;
 
-    //private void 
+    public float CurrentHealth { get; private set; } = 50f;
+    public float MaxHealth { get; private set; } = 100f;
 
-    private void TakeDamage()
+    public UnityAction<float> HealthChanger;
+
+    public void TakeDamage(float damage)
     {
-
+        CurrentHealth -= damage;
+        CurrentHealth = Mathf.Clamp(CurrentHealth, _minHealth, MaxHealth);
+        HealthChanger?.Invoke(CurrentHealth);
     }
 
-    private void AddHealth()
+    public void AddHealth(float heal)
     {
-
+        CurrentHealth += heal;
+        CurrentHealth = Mathf.Clamp(CurrentHealth, _minHealth, MaxHealth);
+        HealthChanger?.Invoke(CurrentHealth);
     }
 }
