@@ -172,7 +172,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246975197}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 658e28ae8d03dfd4eb717ec7255be8ea, type: 3}
   m_Name: 
@@ -241,7 +241,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 246975202}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1292877909}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &246975202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +701,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 1998006463}
   _player: {fileID: 1292877909}
+  _gradient:
+    serializedVersion: 2
+    key0: {r: 0.8584906, g: 0.09313814, b: 0.09313814, a: 1}
+    key1: {r: 0.735849, g: 0.417171, b: 0.05206478, a: 1}
+    key2: {r: 0.22789194, g: 0.8584906, b: 0.13363297, a: 0.039215688}
+    key3: {r: 0, g: 0, b: 0, a: 0.039215688}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32774
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 65535
+    atime3: 65535
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
 --- !u!1 &1242629311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1164,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1871856148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1292877909}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: AddHealth
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 10
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1871856148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,7 +1222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871856144}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e47739b3d3abce46aa35650c2ee93eb, type: 3}
   m_Name: 
@@ -1473,7 +1526,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.555
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

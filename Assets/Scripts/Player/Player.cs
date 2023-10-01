@@ -10,19 +10,19 @@ public class Player : MonoBehaviour
     public float CurrentHealth { get; private set; } = 50f;
     public float MaxHealth { get; private set; } = 100f;
 
-    public UnityAction<float> HealthChanger;
+    public UnityAction<float> HealthChanged;
 
     public void TakeDamage(float damage)
     {
         CurrentHealth -= damage;
         CurrentHealth = Mathf.Clamp(CurrentHealth, _minHealth, MaxHealth);
-        HealthChanger?.Invoke(CurrentHealth);
+        HealthChanged?.Invoke(CurrentHealth);
     }
 
     public void AddHealth(float heal)
     {
         CurrentHealth += heal;
         CurrentHealth = Mathf.Clamp(CurrentHealth, _minHealth, MaxHealth);
-        HealthChanger?.Invoke(CurrentHealth);
+        HealthChanged?.Invoke(CurrentHealth);
     }
 }
